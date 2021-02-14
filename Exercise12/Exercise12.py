@@ -1,12 +1,8 @@
 text = ""
-FinalText = ""
+myfile = open("myfile.txt", "r", encoding="utf8")
 
-file = open("myfile.txt", "r", encoding="utf8")
-for line in file:
-    text = text + line
-file.close()
+for line in myfile:
+    for character in range(len(line)):
+        text = (chr(128 - ord(line[character]))) + text
 
-for index in range(len(text)-1, -1, -1):
-    FinalText = FinalText + chr(128 - ord(text[index]))
-
-print(FinalText)
+print(text)
