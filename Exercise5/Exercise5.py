@@ -35,7 +35,7 @@ for index in range(100):
         sos.append("O")
 
     # Δημιουργία του πίνακα
-    square = [["" for a in range(SquareHeight)] for b in range(SquareBase)]
+    square = [["" for a in range(SquareBase)] for b in range(SquareHeight)]
     for vertical in range(SquareHeight):
         for horizontal in range(SquareBase):
             square[vertical][horizontal] = random.choice(sos)
@@ -72,4 +72,4 @@ for index in range(100):
                     val_horizontal(square, vertical, horizontal)
 
 Average = Sum / 100
-print("Ό Μέσος όρος των sos είναι ", Average)
+print("Ό Μέσος όρος των sos είναι ", int(Average))
